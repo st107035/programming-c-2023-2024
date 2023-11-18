@@ -1,0 +1,37 @@
+﻿  Source.cpp
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2143: синтаксическая ошибка: отсутствие ";" перед "&"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,14): error C2460: std::istream: использует "Z239Z", определяемый в настоящий момент
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(3): message : см. объявление "Z239Z"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2433: std::istream: "friend" не разрешается для объявлений данных
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2063: std::istream: не является функцией
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,61): error C2238: непредвиденные лексемы перед ";"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Source.cpp(16,16): error C2679: бинарный ">>": не найден оператор, принимающий правый операнд типа "Z239Z" (или приемлемое преобразование отсутствует)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(299,39): message : может быть "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_streambuf<char,std::char_traits<char>> *)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(295,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(void *&)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(291,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(long double &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(287,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(double &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(283,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(float &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(279,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned __int64 &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(275,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(__int64 &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(271,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned long &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(267,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(long &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(263,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned int &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(255,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(int &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(251,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(unsigned short &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(219,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(short &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(215,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(bool &)"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(186,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::ios_base &(__cdecl *)(std::ios_base &))"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(181,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_ios<char,std::char_traits<char>> &(__cdecl *)(std::basic_ios<char,std::char_traits<char>> &))"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\include\istream(176,39): message : или       "std::basic_istream<char,std::char_traits<char>> &std::basic_istream<char,std::char_traits<char>>::operator >>(std::basic_istream<char,std::char_traits<char>> &(__cdecl *)(std::basic_istream<char,std::char_traits<char>> &))"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Source.cpp(16,16): message : при попытке сопоставить список аргументов "(std::istream, Z239Z)"
+  Z239Z.cpp
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2143: синтаксическая ошибка: отсутствие ";" перед "&"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,14): error C2460: std::istream: использует "Z239Z", определяемый в настоящий момент
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(3): message : см. объявление "Z239Z"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2433: std::istream: "friend" не разрешается для объявлений данных
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,21): error C2063: std::istream: не является функцией
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(26,61): error C2238: непредвиденные лексемы перед ";"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.cpp(116,9): error C2248: Z239Z::a: невозможно обратиться к private член, объявленному в классе "Z239Z"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(5): message : см. объявление "Z239Z::a"
+D:\programming-c-2022-autumn\Homework-2023-09-29\Task1\Z239Z.h(3): message : см. объявление "Z239Z"
+  Создание кода...
