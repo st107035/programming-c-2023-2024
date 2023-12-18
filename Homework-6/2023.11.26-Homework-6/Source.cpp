@@ -144,7 +144,7 @@ int main(int argc, char* argv[])
 
 	for (int i = 0; i < n; ++i)
 	{
-		cout << "Task " << i << " finishes on average after " << time_of_tasks[i] / 10 << " tacts " << endl;
+		cout << "Task " << i << " finishes on average after " << time_of_tasks[i] / n << " tacts " << endl;
 	}
 
 	delete[] time_of_tasks;

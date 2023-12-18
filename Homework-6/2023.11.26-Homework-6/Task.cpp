@@ -9,7 +9,7 @@ using namespace std;
 		this->name = name;
 		this->initialt = initialt;
 		this->t = t;
-		if ((priority > 0) && (priority <= 10))
+		if ((priority > 0) && (priority < 10))
 		{
 			this->priority = 10 - priority;
 		}
