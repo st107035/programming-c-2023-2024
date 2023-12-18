@@ -28,7 +28,7 @@ public:
 	bool operator<=(const ZmZ& z);
 	bool operator>=(const ZmZ& z);
 
-	ZmZ ReverseElement();
+	ZmZ ReverseElement() const;
 
 	friend ZmZ BinPow(ZmZ z, int n);
 	friend std::istream& operator>>(std::istream& in, ZmZ& z);

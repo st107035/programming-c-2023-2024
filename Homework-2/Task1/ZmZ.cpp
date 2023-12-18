@@ -33,18 +33,15 @@ ZmZ ZmZ::operator+(const ZmZ& z)
 }
 ZmZ ZmZ::operator-(const ZmZ& z)
 {
-	ZmZ znew(a - z.a);
-	return znew;
+	return ZmZ(a - z.a);
 }
 ZmZ ZmZ::operator*(const ZmZ& z)
 {
-	ZmZ znew(a * z.a);
-	return znew;
+	return ZmZ(a * z.a);
 }
 ZmZ ZmZ::operator/(const ZmZ& z)
 {
-	ZmZ znew(a / z.a);
-	return znew;
+	return ZmZ(a * z.ReverseElement().a);
 }
 ZmZ& ZmZ::operator+=(const ZmZ& z)
 {
@@ -97,7 +94,7 @@ bool ZmZ::operator>=(const ZmZ& z)
 };
 
 
-ZmZ ZmZ::ReverseElement()
+ZmZ ZmZ::ReverseElement() const 
 {
 	for (int i = 1; i < 240; ++i)
 	{
