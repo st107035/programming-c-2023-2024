@@ -1,37 +1,63 @@
 #include "Appartment.h"
-Appartment::Appartment(double mcost, double s, int floor, int comfortclass) : Building(mcost, s), floor(floor), comfortclass(comfortclass) {};
 
-double Appartment::price() const
+double Appartment::GetMonthCost() const
 {
 	switch (comfortclass)
 	{
-	case 1: return mcost * s + 1.005 * floor;
-	case 2: return 1.5 * (mcost * s + 1.005 * floor);
-	case 3: return 1.75 * (mcost * s + 1.005 * floor);
-	case 4: return 2 * (mcost * s + 1.005 * floor);
-	case 5: return 2.25 * (mcost * s + 1.005 * floor);
+	case 1: return 0.001 * cost * s;
+	case 2: return 0.001 * 1.5 * (cost * s);
+	case 3: return 0.001 * 1.75 * (cost * s);
+	case 4: return 0.001 * 2 * (cost * s);
+	case 5: return 0.001 * 2.25 * (cost * s);
 	}
 }
 
-double Appartment::GetFloor()
-{
-	return floor;
-}
-double Appartment::GetComfortclass()
+unsigned Appartment::GetComfortclass() const
 {
 	return comfortclass;
 }
-void Appartment::SetFloor(int floor)
+unsigned Appartment::GetFloor() const
 {
-	if (floor >= 0)
+	return floor;
+}
+unsigned Appartment::GetHappiness()
+{
+	return happiness;
+}
+unsigned Appartment::GetPopulation() const 
+{
+	return population;
+}
+
+void Appartment::SetHappiness(int h)
+{
+	happiness += h;
+}
+void Appartment::Upgrade()
+{
+	if (comfortclass < 5)
 	{
-		this->floor = floor;
+		comfortclass += 1;
+		population += 3;
+		global_population += 3;
+	}
+	else
+	{
+		throw exception("Your appartment has already been upgrated to the maximum level!");
 	}
 }
-void Appartment::SetComfortclass(int comfortclass)
+void Appartment::ResetTaxes()
 {
-	if ((comfortclass >= 0) && (comfortclass <= 5))
-	{
-		this->comfortclass = comfortclass;
-	}
+	tax_flag = 0;
 }
+void Appartment::Purchase()
+{
+	population = 30 * floor * comfortclass *( 1 + (this->GetHappiness() / 100));
+	global_population += population;
+	count += 1;
+}
+
+Appartment::Appartment(string name, double cost, double s, unsigned comfortclass, unsigned floor) : Building(name, cost, s), comfortclass(comfortclass), floor(floor) {};
+Appartment::Appartment(const Appartment& ap) : Building(ap.name, ap.cost, ap.s), comfortclass(ap.comfortclass), floor(ap.floor), population(ap.population) {};
+Appartment::~Appartment() {};
+

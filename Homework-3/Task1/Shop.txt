@@ -1,0 +1,12 @@
+Appartment Casual appartment building 1500 100 1 3
+Appartment Town appartment building 2500 120 1 5
+ResourceBuilding Water tower 200 20 Water
+ResourceBuilding Windmill 300 20 Electricity
+Infrastructure Cafe 1000 30 1
+Infrastructure Small shop 2000 40 2
+Service Little hospital 400 50 1 Medicine
+Service Little police station 500 50 1 Security
+Service Little fire station 600 60 1 Fire Security 
+GovernmentBuilding Little town hall 3000 100
+Park Little town park 200 80
+Park Middle town park 500 120

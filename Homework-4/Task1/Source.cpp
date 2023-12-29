@@ -1,6 +1,6 @@
 #include<iostream>
 #include "Clist.h"
-#define T char
+#define T int
 
 using namespace std;
 
@@ -15,10 +15,10 @@ int main(int argc, char* argv[])
 	clist1.Print();
 	cout << endl;
 
-	for (int i = 0; i < size; ++i)
+	for (int i = 0; i < size + 1; ++i)
 	{
-		clist1.AddTail('0' + i);
-		clist1.AddHead('0' + i);
+		clist1.AddTail(i);
+		clist1.AddHead(i);
 	}
 
 	clist1.Print();

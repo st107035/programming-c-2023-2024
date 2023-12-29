@@ -1,3 +1,28 @@
 ﻿  Source.cpp
-D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(34): warning C4715: Clist<char>::GetElem: значение возвращается не при всех путях выполнения
+D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(109,21): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "Source.cpp")
+  D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(109,21):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	D:\programming-c-2023-2024\Homework-4\Task1\Source.cpp(13,11):
+  	выполняется компиляция ссылки на экземпляр класс шаблон функции "Clist<int>"
+  	D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(106,7):
+  	во время компиляции функции-члена класс шаблон "void Clist<int>::Print(void)"
+  		D:\programming-c-2023-2024\Homework-4\Task1\Source.cpp(15,14):
+  		см. первую ссылку на "Clist<int>::Print" в "main"
+  
+D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(27,21): warning C4018: <: несоответствие типов со знаком и без знака
+  (компиляция исходного файла "Source.cpp")
+  D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(27,21):
+  контекст создания экземпляра шаблона (сначала самый старый)
+  	D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(22,11):
+  	во время компиляции функции-члена класс шаблон "Node<T> *Clist<T>::GetElem(unsigned int)"
+          with
+          [
+              T=int
+          ]
+  		D:\programming-c-2023-2024\Homework-4\Task1\Clist.h(111,32):
+  		см. первую ссылку на "Clist<int>::GetElem" в "Clist<int>::Print"
+  		D:\programming-c-2023-2024\Homework-4\Task1\Source.cpp(15,14):
+  		см. первую ссылку на "Clist<int>::Print" в "main"
+  
   Task1.vcxproj -> D:\programming-c-2023-2024\Homework-4\x64\Debug\Task1.exe

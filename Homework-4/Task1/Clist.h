@@ -8,29 +8,27 @@ template <typename T> class Clist
 {
 private:
 
-	int size;
+	unsigned size;
 	Node<T>* head;
 	Node<T>* tail;
 
 public:
 
-	int GetSize()
+	unsigned GetSize()
 	{
 		return this->size;
 	}
 
-	Node<T>* GetElem(int i)
+	Node<T>* GetElem(unsigned i)
 	{
-		if (i >= 0)
-		{
-			Node<T>* temp = head;
+		i = i % size;
+		Node<T>* temp = head;
 
-			for (int j = 0; j < i; ++j)
-			{
-				temp = temp->next;
-			}
-			return temp;
+		for (int j = 0; j < i; ++j)
+		{				
+			temp = temp->next;
 		}
+		return temp;
 	}
 
 	void AddHead(T x)
@@ -69,28 +67,39 @@ public:
 		}
 	}
 
-	void Delete(int i)
+	void Delete(unsigned i)
 	{
 		Node<T>* prev;
 
-		if (i == 0)
+		if (size != 0)
 		{
-			tail->next = head->next;
-			head = head->next;
-			delete head; 
-			--size;
-		}
-		if (i > 0)
-		{
-			prev = GetElem(i - 1);
-			Node<T>* temp = prev->next;
-			prev->next = temp->next;
-			if (i % size == 0)
+			if (i == 0)
 			{
-				tail = prev;
+				tail->next = head->next;
+				prev = head;
+				head = prev->next;
+				delete prev;
+				--size;
 			}
-			delete temp;
-			--size;
+			if (i > 0)
+			{
+				prev = GetElem(i - 1);
+				Node<T>* temp = prev->next;
+				prev->next = temp->next;
+				if (i % size == (size - 1))
+				{
+					tail = prev;
+				}
+				delete temp;
+				--size;
+			}
+		}
+		else
+		{
+			if (i == 0)
+			{
+				delete head;
+			}
 		}
 	}
 
@@ -117,16 +126,19 @@ public:
 
 	~Clist()
 	{
-		Node<T>* temp = head;
-
-		while(temp->next != tail)
+		if (size != 0)
 		{
-			Node<T>* thisnode = temp;
-			temp = temp->next;
-			delete thisnode;
-		}
+			Node<T>* temp = head;
 
-		delete temp;
+			while (temp->next != tail)
+			{
+				Node<T>* thisnode = temp;
+				temp = temp->next;
+				delete thisnode;
+			}
+
+			delete temp;
+		}
 	}
 };
 

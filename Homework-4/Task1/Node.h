@@ -8,5 +8,5 @@ public:
 
 	Node(T x = 0, Node<T>* next = nullptr) : x(x), next(next) {};
 
-	~Node() {}
+	//~Node() {}
 };

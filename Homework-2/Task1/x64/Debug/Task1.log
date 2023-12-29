@@ -1,2 +1,6 @@
 ﻿  Source.cpp
+  ZmZ.cpp
+  Создание кода...
+D:\programming-c-2023-2024\Homework-2\Task1\ZmZ.cpp(35): warning C4715: ZmZ::ReverseElement: значение возвращается не при всех путях выполнения
+D:\programming-c-2023-2024\Homework-2\Task1\ZmZ.cpp(58): warning C4715: BinPow: значение возвращается не при всех путях выполнения
   Task1.vcxproj -> D:\programming-c-2023-2024\Homework-2\x64\Debug\Task1.exe

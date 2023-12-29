@@ -1,29 +1,59 @@
 #include "Building.h"
 
-Building::Building(double mcost, double s) : mcost(mcost), s(s) {};
-
-double Building::GetMcost()
+double Building::GetCost() const
 {
-	return mcost;
+	return cost;
 }
-
-double Building::GetS()
+double Building::GetS() const
 {
 	return s;
 }
-
-void Building::SetMcost(double mcost)
+bool Building::GetElectricity()  
 {
-	if (mcost > 0)
-	{
-		this->mcost = mcost;
-	}
+	return electricity;
+}
+bool Building::GetWater()
+{
+	return water;
+}
+bool Building::GetSecurity()
+{
+	return security;
+}
+bool Building::GetMedicine() 
+{
+	return medicine;
+}
+bool Building::GetFireSecurity()
+{
+	return fire_security;
+}
+string Building::GetName() const
+{
+	return name;
 }
 
+void Building::SetCost(double mcost)
+{
+	//unique_lock<mutex> ul(mtx);
+	if (mcost > 0)
+	{
+		this->cost = mcost;
+	}
+}
 void Building::SetS(double s)
 {
+	//unique_lock<mutex> ul(mtx);
 	if (s > 0)
 	{
 		this->s = s;
 	}
 }
+void Building::Print() const
+{
+	cout << name << " | cost: " << cost << " area: " << s << endl;
+}
+
+Building::Building(string name, double cost, double s) : name(name), cost(cost), s(s) {};
+Building::Building(const Building& b): name(b.name), cost(b.cost), s(b.s) {};
+Building::~Building() {};

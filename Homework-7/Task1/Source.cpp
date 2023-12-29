@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
 
 	thread t1([&q]()
 		{
-			for (int i = 0; i < 10; ++i)
+			for (int i = 0; i < 100; ++i)
 			{
 				this_thread::sleep_for(chrono::milliseconds(2));
 				q.Print();
@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 
 	thread t2([&q]()
 		{
-			for (int i = 0; i < 10; ++i)
+			for (int i = 0; i < 100; ++i)
 			{
 				this_thread::sleep_for(chrono::milliseconds(1));
 				q.push(i);
@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 
 	thread t3([&q]()
 		{
-			for (int i = 0; i < 10; ++i)
+			for (int i = 0; i < 100; ++i)
 			{
 				this_thread::sleep_for(chrono::milliseconds(3));
 				try

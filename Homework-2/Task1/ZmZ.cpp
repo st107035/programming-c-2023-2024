@@ -21,78 +21,6 @@ ZmZ::ZmZ(int a)
 }
 
 ZmZ::ZmZ(const ZmZ& z) : a(z.a) {};
- 
-void ZmZ::operator=(const ZmZ& z)
-{
-	a = z.a;
-} 
-ZmZ ZmZ::operator+(const ZmZ& z)
-{
-	//Z239Z znew(a + z.a);
-	return ZmZ(a + z.a);
-}
-ZmZ ZmZ::operator-(const ZmZ& z)
-{
-	return ZmZ(a - z.a);
-}
-ZmZ ZmZ::operator*(const ZmZ& z)
-{
-	return ZmZ(a * z.a);
-}
-ZmZ ZmZ::operator/(const ZmZ& z)
-{
-	return ZmZ(a * z.ReverseElement().a);
-}
-ZmZ& ZmZ::operator+=(const ZmZ& z)
-{
-	a += z.a;
-	this->a = mod(a, m);
-	return *this;
-}
-ZmZ& ZmZ::operator-=(const ZmZ& z)
-{
-	a -= z.a;
-	this->a = mod(a, m);
-	return *this;
-}
-ZmZ& ZmZ::operator*=(const ZmZ& z)
-{
-	a *= z.a;
-	this->a = mod(a, m);
-	return *this;
-}
-ZmZ& ZmZ::operator/=(const ZmZ& z)
-{
-	a /= z.a;
-	this->a = mod(a, m);
-	return *this;
-}
-
-bool ZmZ::operator==(const ZmZ& z)
-{
-	return (this->a == z.a);
-};
-bool ZmZ::operator!=(const ZmZ& z) 
-{
-	return (this->a != z.a);
-};
-bool ZmZ::operator>(const ZmZ& z)
-{
-	return (this->a > z.a);
-};
-bool ZmZ::operator<(const ZmZ& z) 
-{
-	return (this->a < z.a);
-};
-bool ZmZ::operator<=(const ZmZ& z)
-{
-	return (this->a <= z.a);
-};
-bool ZmZ::operator>=(const ZmZ& z)
-{
-	return (this->a >= z.a);
-};
-
 
 ZmZ ZmZ::ReverseElement() const 
 {
@@ -128,6 +56,75 @@ ZmZ BinPow(ZmZ z, int n)
 		return ZmZ(BinPow(z.ReverseElement(), n));
 	}
 };
+
+ZmZ& ZmZ::operator=(const ZmZ& z)
+{
+	a = z.a;
+	return *this;
+}
+ZmZ operator+(ZmZ z1, const ZmZ& z2)
+{
+	return z1 += z2;
+}
+ZmZ operator-(ZmZ z1, const ZmZ& z2)
+{
+	return z1 -= z2;
+}
+ZmZ operator*(ZmZ z1, const ZmZ& z2)
+{
+	return z1 *= z2;
+}
+ZmZ operator/(ZmZ z1, const ZmZ& z2)
+{
+	return z1 /= z2;
+}
+
+ZmZ& operator+=(ZmZ& z1, const ZmZ& z2)
+{
+	z1.a = mod(z1.a + z2.a, m);
+	return z1;
+}
+ZmZ& operator-=(ZmZ& z1, const ZmZ& z2)
+{
+	z1.a = mod(z1.a - z2.a, m);
+	return z1;
+}
+ZmZ& operator*=(ZmZ& z1, const ZmZ& z2)
+{
+	z1.a = mod(z1.a * z2.a, m);
+	return z1;
+}
+ZmZ& operator/=(ZmZ& z1, const ZmZ& z2)
+{
+	z1.a = mod(z1.a * z2.ReverseElement().a, m);
+	return z1;
+}
+
+bool operator==(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a == z2.a);
+};
+bool operator!=(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a != z2.a);
+};
+bool operator<(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a < z2.a);
+};
+bool operator>(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a > z2.a);
+};
+bool operator<=(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a <= z2.a);
+};
+bool operator>=(const ZmZ& z1, const ZmZ& z2)
+{
+	return (z1.a >= z2.a);
+};
+
 std::istream& operator>>(std::istream& in, ZmZ& z)
 {
 	in >> z.a;

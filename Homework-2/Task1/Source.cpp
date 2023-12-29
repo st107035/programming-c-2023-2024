@@ -21,6 +21,14 @@ int main(int argc, char* argv[])
 	cout << "(z1 < z2) " << boolalpha << (z1 < z2) << endl;
 	cout << "(z1 >= z2) " << boolalpha << (z1 >= z2) << endl;
 	cout << "(z1 <= z2) " << boolalpha << (z1 <= z2) << endl;
+	z1 += z2;
+	cout << "z1 after z1 += z2" << z1 << endl;
+	z1 -= z2;
+	cout << "z1 after z1 -= z2" << z1 << endl;
+	z1 *= z2;
+	cout << "z1 after z1 *= z2" << z1 << endl;
+	z1 /= z2;
+	cout << "z1 after z1 /= z2" << z1 << endl;
 	cout << "z1 ^ z = " << BinPow(z1, z) << endl;
 	cout << "Reverse element of z1 = " << z1.ReverseElement() << endl;
 	cout << "Reverse element of z2 = " << z2.ReverseElement() << endl;

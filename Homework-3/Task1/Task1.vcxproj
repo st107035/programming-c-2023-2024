@@ -129,13 +129,28 @@
   <ItemGroup>
     <ClCompile Include="Appartment.cpp" />
     <ClCompile Include="Building.cpp" />
-    <ClCompile Include="CountryHouse.cpp" />
+    <ClCompile Include="Goods.cpp" />
+    <ClCompile Include="GovernmentBuilding.cpp" />
+    <ClCompile Include="Infrastructure.cpp" />
+    <ClCompile Include="Manufacture.cpp" />
+    <ClCompile Include="Park.cpp" />
+    <ClCompile Include="ResourceBuilding.cpp" />
+    <ClCompile Include="Service.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Appartment.h" />
     <ClInclude Include="Building.h" />
-    <ClInclude Include="CountryHouse.h" />
+    <ClInclude Include="Goods.h" />
+    <ClInclude Include="GovernmentBuilding.h" />
+    <ClInclude Include="Infrastructure.h" />
+    <ClInclude Include="Manufacture.h" />
+    <ClInclude Include="Park.h" />
+    <ClInclude Include="ResourceBuilding.h" />
+    <ClInclude Include="Service.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Shop.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

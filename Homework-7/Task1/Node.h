@@ -8,7 +8,7 @@ public:
 
 	Node(T data = T(), Node* next = nullptr) : data(data), next(next) {};
 
-	~Node() {};
+//	~Node() {};
 
 };
 

@@ -1,31 +1,42 @@
 #pragma once
+#include <exception>
+#include <string>
+#include <iostream>
+
+using namespace std;
+
 class Building
 {
 protected:
-	double mcost;
+	string name;
+	double cost;
 	double s;
+	static bool security;
+	static bool medicine;
+	static bool fire_security;
+	static bool water;
+	static bool electricity;
 
-	Building(double mcost = 0, double s = 0);
 public:
-	virtual double price() const = 0;
-	double GetMcost();
-	double GetS();
-	void SetMcost(double mcost);
-	void SetS(double s);
 
-	virtual double GetFloor() = 0;
-	virtual double GetComfortclass() = 0;
-	virtual void SetFloor(int floor) = 0;
-	virtual void SetComfortclass(int comfortclass) = 0;
+	virtual double GetCost() const;
+	virtual double GetS() const;
+	virtual double GetMonthCost() const = 0;
+	virtual string GetName() const;
+	virtual void SetCost(double mcost);
+	virtual void SetS(double s);
+	virtual void Purchase() = 0;
 
-	virtual bool GetGaz() = 0;
-	virtual bool GetElectricity() = 0;
-	virtual bool GetCanalization() = 0;
-	virtual void SetGaz(bool gaz) = 0;
-	virtual void SetElectricity(bool electricity) = 0;
-	virtual void SetCanalization(bool canalization) = 0;
-	
+	static bool GetElectricity();
+	static bool GetWater();
+	static bool GetSecurity();
+	static bool GetMedicine();
+	static bool GetFireSecurity();
 
-	virtual ~Building() {};
+	void Print() const;
+
+	Building(string name = " ", double cost = 0, double s = 0);
+	Building(const Building& b);
+	virtual ~Building();
 };
 

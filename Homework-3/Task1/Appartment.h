@@ -1,20 +1,37 @@
 #pragma once
 #include "Building.h"
+
 class Appartment :
     public Building
 {
 protected: 
-    int floor;
-    int comfortclass;
-public: 
-    Appartment(double mcost = 0, double s = 0, int floor = 1, int comfortclass = 1);
 
-    double price() const;
-    double GetFloor();
-    double GetComfortclass();
-    void SetFloor(int floor);
-    void SetComfortclass(int comfortclass);
+    unsigned comfortclass;
+    unsigned population; 
+    unsigned floor;
 
-    ~Appartment() {};
+public:
+
+    static unsigned happiness;
+    static int count;
+    static double taxes;
+    static unsigned global_population; 
+    static unsigned global_population_limit;
+    static bool tax_flag;
+
+    double GetMonthCost() const override;
+
+    unsigned GetComfortclass() const;
+    unsigned GetFloor() const;
+    static unsigned GetHappiness();
+    unsigned GetPopulation() const;
+    void Purchase() override;
+    static void ResetTaxes();
+    static void SetHappiness(int h);
+    void Upgrade();
+
+    Appartment(string name = " ", double cost = 0, double s = 0, unsigned comfortclass = 1, unsigned floor = 1);
+    Appartment(const Appartment& ap);
+    ~Appartment();
 };
 
